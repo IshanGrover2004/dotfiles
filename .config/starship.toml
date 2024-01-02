@@ -1,0 +1,110 @@
+# Don't print a new line at the start of the prompt
+add_newline = true
+
+# makes prompt a single line
+[line_break]
+disabled = false
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = false
+
+[cmd_duration]
+min_time = 1_000                         # Show command duration over 1,000 milliseconds (= 1 sec)
+format = '[\[🕙$duration\]](bold yellow)'
+
+[character]
+error_symbol = "[✗](bold #ff0000)"
+success_symbol = "[❯](bold #ea00d9)"
+
+# These symbols will only show when battery levels are 20% or less
+[battery]
+# full_symbol = "󰁹 "
+charging_symbol = "⚡️"
+# discharging_symbol = "󰁺 "
+
+[[battery.display]] # "bold red" style when capacity is between 0% and 20%
+threshold = 20
+style = "bold red"
+discharging_symbol = "󰁺 "
+
+[[battery.display]] # "bold yellow" style when capacity is between 20% and 35%
+threshold = 35
+style = "bold yellow"
+discharging_symbol = "󰁼 "
+
+[[battery.display]] # "bold yellow" style when capacity is between 35% and 50%
+threshold = 50
+style = "bold yellow"
+discharging_symbol = "󰁾 "
+
+[[battery.display]] # "bold green" style when capacity is between 50% and 75%
+threshold = 65
+style = "bold green"
+discharging_symbol = "󰂁 "
+
+[[battery.display]] # "bold green" style when capacity is between 75% and 90%
+threshold = 80
+style = "bold green"
+discharging_symbol = "󰂂 "
+
+[[battery.display]] # "bold green" style when capacity is between 90% and 100%
+threshold = 100
+style = "bold green"
+discharging_symbol = "󰁹 "
+
+# Clear visibility for exit codes
+[status]
+style = "red"
+symbol = "💣"
+format = '[\[$symbol$status\]]($style) '
+disabled = false
+
+[python]
+format = "[$symbol $version]($style) "
+style = "bold #f57800"
+symbol = "󱔎"
+# pyenv_version_name = true
+
+[rust]
+format = "[$symbol $version]($style) "
+symbol = ""
+style = "bold green"
+
+[c]
+format = "[$symbol $version]($style) "
+symbol = ""
+style = "bold #f57800"
+
+[nodejs]
+format = "[$symbol $version]($style) "
+symbol = "󰎙"
+style = "bold #f57800"
+
+[java]
+format = "[$symbol $version]($style) "
+symbol = ""
+style = "bold #f57800"
+
+[php]
+format = "[$symbol $version]($style) "
+symbol = ""
+style = "bold #f57800"
+
+[docker_context]
+format = "[$symbol $version]($style) "
+symbol = ""
+style = "bold #f57800"
+
+[directory]
+truncation_length = 5
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+# style = "bold #f57800"
+style = "bold cyan"
+read_only = "🔒"
+read_only_style = "bold italic white"
+
+[username]
+style_user = "bold #ea00d9"
+show_always = true
+format = "[$user: ]($style)"
