@@ -1,0 +1,11 @@
+/*
+!/.gitignore
+!/.bashrc
+
+!/.config/
+/.config/*
+!/.config/kitty
+# !/.config/hypr
+!/.config/nvim
+!/.config/starship.conf
+
