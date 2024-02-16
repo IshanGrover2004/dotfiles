@@ -116,6 +116,11 @@ format = "[$symbol]($style) "
 symbol = ""
 style = "bold #f57800"
 
+[cmake]
+format = "[$symbol]($style) "
+symbol = "󰔷 "
+style = "bold #f57800"
+
 [docker_context]
 format = "[$symbol]($style) "
 symbol = "🐳 "
@@ -128,3 +133,9 @@ symbol = " "
 [hg_branch]
 format = "[[on](bold white) $symbol$branch ]($style)"
 symbol = " "
+
+[git_status]
+disabled = true
+
+[git_metrics]
+disabled = true
