@@ -8,4 +8,4 @@
 # !/.config/hypr
 !/.config/nvim
 !/.config/starship.conf
-
+!/.tmux.conf
